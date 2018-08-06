@@ -27,6 +27,7 @@ public class Juego extends AppCompatActivity implements OnClickListener{
     List<Integer> listaColores = new ArrayList<>();
     List<String> listaPalabras = new ArrayList<>();
     List<Integer> listaRandom = new ArrayList<>();
+    List<Integer> listaImagenes = new ArrayList<>();
     ProgressBar pBTimepo;
 
     @Override
@@ -38,6 +39,7 @@ public class Juego extends AppCompatActivity implements OnClickListener{
         listGame();
         randomizer();
         chronometer();
+        inputData();
     }
 
 
@@ -124,14 +126,22 @@ public class Juego extends AppCompatActivity implements OnClickListener{
     private void listGame() {
         listaPalabras  = new ArrayList<>();
         listaColores= new ArrayList<>();
+        listaImagenes = new ArrayList<>();
         listaPalabras.add("AMARILLO");
         listaColores.add(getColor(R.color.colorAmarillo));
+        listaImagenes.add(R.drawable.amarillo);
+
         listaPalabras.add("AZUL");
         listaColores.add(getColor(R.color.colorAzul));
+        listaImagenes.add(R.drawable.azul);
+
         listaPalabras.add("ROJO");
         listaColores.add(getColor(R.color.colorRojo));
+        listaImagenes.add(R.drawable.rojo);
+
         listaPalabras.add("VERDE");
         listaColores.add(getColor(R.color.colorVerde));
+        listaImagenes.add(R.drawable.verde);
 
 
     }
@@ -142,13 +152,15 @@ public class Juego extends AppCompatActivity implements OnClickListener{
         icR = (int) (Math.random() * 4);
         Collections.shuffle(listaRandom);
 
+
         txtPalabra.setText(listaPalabras.get(ipR));
         txtPalabra.setTextColor(listaColores.get(icR));
 
-        btnColor1.setBackgroundColor(listaColores.get(0));
-        btnColor2.setBackgroundColor(listaColores.get(1));
-        btnColor3.setBackgroundColor(listaColores.get(2));
-        btnColor4.setBackgroundColor(listaColores.get(3));
+
+        btnColor1.setBackgroundColor(listaRandom.get(0));
+        btnColor2.setBackgroundColor(listaRandom.get(1));
+        btnColor3.setBackgroundColor(listaRandom.get(2));
+        btnColor4.setBackgroundColor(listaRandom.get(3));
 
     }
 
@@ -246,6 +258,12 @@ public class Juego extends AppCompatActivity implements OnClickListener{
         }
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        bandera=false;
+        ab=1;
+    }
 
 
 }

@@ -265,5 +265,12 @@ public class JuegoC extends AppCompatActivity implements OnClickListener{
         }
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        bandera=false;
+        ab=1;
+    }
+
 
 }
