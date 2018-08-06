@@ -78,7 +78,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:onClick="puntuacion">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -119,7 +120,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:onClick="configuracion">
 
             <ImageView
                 android:layout_width="match_parent"

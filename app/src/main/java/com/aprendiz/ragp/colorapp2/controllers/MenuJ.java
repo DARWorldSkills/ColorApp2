@@ -21,4 +21,16 @@ public class MenuJ extends AppCompatActivity {
         startActivity(intent);
         guardar=1;
     }
+
+    public void puntuacion(View view) {
+        Intent intent = new Intent(MenuJ.this,Puntuacion.class);
+        startActivity(intent);
+        guardar=0;
+    }
+
+    public void configuracion(View view) {
+        Intent intent = new Intent(MenuJ.this,Configuracion.class);
+        startActivity(intent);
+        guardar=0;
+    }
 }
