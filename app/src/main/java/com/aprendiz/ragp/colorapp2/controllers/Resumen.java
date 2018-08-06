@@ -35,14 +35,14 @@ public class Resumen extends AppCompatActivity {
         setContentView(R.layout.activity_resumen);
         inizialite();
         inputData();
-        screenShot(contenedorR);
+        //screenShot(contenedorR);
 
 
         btnFace.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Compartir();
+                //Compartir();
             }
         });
     }
@@ -188,4 +188,7 @@ public class Resumen extends AppCompatActivity {
     }
 
 
+    public void finishR(View view) {
+        finish();
+    }
 }
