@@ -1,5 +1,6 @@
 package com.aprendiz.ragp.colorapp2.controllers;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,7 +12,6 @@ import android.widget.TextView;
 
 import com.aprendiz.ragp.colorapp2.R;
 
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -102,7 +102,9 @@ public class Juego extends AppCompatActivity implements OnClickListener{
     private void endGame() {
         if (ab==0 &&  (segundos[1]==0 || incorrectas==3 ) ){
             bandera=false;
-
+            Intent intent = new Intent(Juego.this,Resumen.class);
+            startActivity(intent);
+            finish();
             ab=1;
         }
     }
