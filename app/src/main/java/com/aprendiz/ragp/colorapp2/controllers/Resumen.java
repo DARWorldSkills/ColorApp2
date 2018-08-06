@@ -39,6 +39,7 @@ public class Resumen extends AppCompatActivity {
 
             GestorDB gestorDB = new GestorDB(this);
             gestorDB.inputData(score);
+
         }else {
             int correctas = JuegoC.correctas;
             int incorrectas = JuegoC.incorrectas;

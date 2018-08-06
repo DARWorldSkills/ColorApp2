@@ -48,7 +48,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/rbtnTiempo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -56,7 +56,7 @@
             android:textColor="@color/colorAmarillo" />
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/rbtnAciertos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -91,7 +91,7 @@
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/txtTiempoP"
         android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -114,7 +114,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/txtTiempoP"
         app:layout_constraintVertical_bias="0.0" />
 
 
